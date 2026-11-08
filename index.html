@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Salah Ihlasa — Frontend and PHP Web Developer portfolio. Responsive websites, dashboards and web applications."
+    />
+    <meta name="theme-color" content="#071116" />
+    <title>Salah Ihlasa | Web Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      document.documentElement.classList.add("js");
+      (function () {
+        try {
+          const saved = localStorage.getItem("theme");
+          const prefersLight = window.matchMedia(
+            "(prefers-color-scheme: light)",
+          ).matches;
+          document.documentElement.dataset.theme =
+            saved || (prefersLight ? "light" : "dark");
+        } catch (e) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header" id="header">
+      <div class="container nav-wrapper">
+        <a class="logo" href="#home" aria-label="Salah Al-den Ihlasa home"
+          >SALAH Al-Den<span>.</span></a
+        >
+
+        <nav class="nav" id="nav" aria-label="Main navigation">
+          <ul>
+            <li><a class="nav-link active" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#services">Services</a></li>
+            <li><a class="nav-link" href="#projects">Work</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="icon-btn theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch theme"
+          >
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+          <a class="nav-cta" href="#contact"
+            >Let's Talk
+            <i
+              class="fa-solid fa-arrow-up-right-from-square"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <button
+            class="icon-btn menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav"
+          >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="heroTitle">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="blob blob-1"></span>
+          <span class="blob blob-2"></span>
+          <span class="grid-fade"></span>
+        </div>
+
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <span class="badge reveal"
+                ><span class="dot" aria-hidden="true"></span> Available for
+                freelance & junior roles</span
+              >
+
+              <h1
+                class="hero-title reveal"
+                id="heroTitle"
+                style="--delay: 0.1s"
+              >
+                Hi, I'm <span class="gradient-text">Salah Al-den Ihlasa</span>
+              </h1>
+
+              <p class="hero-role reveal" style="--delay: 0.2s">
+                <span
+                  class="typed"
+                  data-words='["Frontend Developer", "Web Developer", "PHP & MySQL Developer"]'
+                  >Frontend Developer</span
+                >
+              </p>
+
+              <p class="hero-text reveal" style="--delay: 0.3s">
+                I build responsive, clean and interactive websites with HTML,
+                CSS and JavaScript — and connect real projects to PHP and MySQL
+                when they need a backend.
+              </p>
+
+              <div class="hero-buttons reveal" style="--delay: 0.4s">
+                <a class="btn btn-primary" href="#contact"
+                  >Get in Touch
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+                ></a>
+                <a class="btn btn-outline" href="#projects">View My Work</a>
+              </div>
+
+              <div
+                class="socials reveal"
+                style="--delay: 0.5s"
+                aria-label="Social links"
+              >
+                <a
+                  class="social-link"
+                  href="https://github.com/salahahlasa69-eng"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github" aria-hidden="true"></i
+                ></a>
+                <a
+                  class="social-link"
+                  href="mailto:your-salahahlasa69@gmail.com"
+                  aria-label="Email"
+                  ><i class="fa-solid fa-envelope" aria-hidden="true"></i
+                ></a>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/progr-salah-alden-863206400?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  aria-label="LinkedIn"
+                  ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+                ></a>
+                <a class="social-link" href="#" aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="hero-visual reveal" style="--delay: 0.2s">
+              <div class="avatar-wrap" id="avatarWrap">
+                <div class="avatar-ring" aria-hidden="true"></div>
+                <div class="avatar">
+                  <div class="avatar-inner">
+                    <img
+                      src="images/parson.jpeg"
+                      alt="Salah Ihlasa placeholder profile image"
+                    />
+                  </div>
+                </div>
+                <div class="floating-card card-top" aria-hidden="true">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Clean Code</span>
+                </div>
+                <div class="floating-card card-bottom" aria-hidden="true">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                  <span>Responsive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about">
+          <span>Scroll to explore</span>
+          <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="aboutTitle">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-tag"
+              ><i class="fa-solid fa-user" aria-hidden="true"></i> About
+              Me</span
+            >
+            <h2 class="section-title" id="aboutTitle">
+              Get to Know <span class="gradient-text">Me</span>
+            </h2>
+            <p class="section-desc">
+              A developer who enjoys clean interfaces, practical code and a
+              smooth experience on every screen.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text reveal">
+              <h3>
+                Turning ideas into real
+                <span class="gradient-text">web experiences.</span>
+              </h3>
+              <p>
+                I'm Salah Ihlasa, a web developer focused on frontend
+                development with a growing backend skill set in PHP and MySQL. I
+                enjoy taking an idea from a simple sketch to a responsive,
+                working website.
+              </p>
+              <p>
+                My current toolbox includes HTML5, CSS3, JavaScript, Bootstrap,
+                PHP, MySQL, Git and GitHub. I also build course projects and
+                small real-world systems to strengthen my development skills.
+              </p>
+
+              <div class="check-list">
+                <div>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Clean, organized code
+                </div>
+                <div>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Responsive on every screen
+                </div>
+                <div>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Semantic, accessible HTML
+                </div>
+                <div>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Learn fast and improve continuously
+                </div>
+              </div>
+
+              <div class="about-actions">
+                <a class="btn btn-primary" href="#contact">Contact Me</a>
+                <a
+                  class="btn btn-soft"
+                  href="assets/Salah_AlDen_Samir_Ramadan_Ihlasa_CV.pdf"
+                  download
+                  >Download CV
+                  <i class="fa-solid fa-download" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="info-stack reveal" style="--delay: 0.15s">
+              <div class="info-card">
+                <div class="info-head">
+                  <span>Personal Info</span><i class="fa-solid fa-id-card"></i>
+                </div>
+                <div class="info-grid">
+                  <div>
+                    <small>Name</small><strong>>Salah Al-den Ihlasa</strong>
+                  </div>
+                  <div>
+                    <small>Role</small><strong>Web & Frontend Developer</strong>
+                  </div>
+                  <div>
+                    <small>Focus</small><strong>Front + Back PHP</strong>
+                  </div>
+                  <div>
+                    <small>Languages</small><strong>Arabic, English</strong>
+                  </div>
+                  <div><small>Goal</small><strong>Job / Freelance</strong></div>
+                  <div>
+                    <small>Learning</small><strong>3–4 hours / day</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-head">
+                  <span>Education</span
+                  ><i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <div>
+                    <small>Current Learning Track</small>
+                    <strong>Web Design & Development</strong>
+                    <p>
+                      Interfaces, C#, Web Databases, JavaScript, Bootstrap, PHP
+                      & OOP.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-card mini-card">
+                <div class="mini-icon">
+                  <i class="fa-solid fa-terminal"></i>
+                </div>
+                <div>
+                  <strong>Build • Learn • Create</strong
+                  ><small>One project at a time.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section-alt"
+        id="skills"
+        aria-labelledby="skillsTitle"
+      >
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-tag"
+              ><i class="fa-solid fa-bolt" aria-hidden="true"></i> Skills</span
+            >
+            <h2 class="section-title" id="skillsTitle">
+              My Technical <span class="gradient-text">Skills</span>
+            </h2>
+            <p class="section-desc">
+              The tools and technologies I use to build, style and publish web
+              projects.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card reveal">
+              <h3>
+                <span class="tl-icon"><i class="fa-solid fa-code"></i></span>
+                Front-End
+              </h3>
+              <div class="skill">
+                <div class="skill-info"><span>HTML5</span><span>95%</span></div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="95"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info"><span>CSS3</span><span>90%</span></div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="90"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>JavaScript</span><span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="80"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>Bootstrap</span><span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="85"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card reveal" style="--delay: 0.12s">
+              <h3>
+                <span class="tl-icon"><i class="fa-solid fa-server"></i></span>
+                Back-End & Tools
+              </h3>
+              <div class="skill">
+                <div class="skill-info"><span>PHP</span><span>75%</span></div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="75"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info"><span>MySQL</span><span>75%</span></div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="75"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>Git & GitHub</span><span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="80"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>Responsive Design</span><span>92%</span>
+                </div>
+                <div class="skill-bar">
+                  <span class="skill-fill" data-level="92"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="tool-cloud reveal"
+            style="--delay: 0.15s"
+            aria-label="Technology list"
+          >
+            <span class="tool"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="tool"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="tool"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="tool"
+              ><i class="fa-brands fa-bootstrap"></i> Bootstrap</span
+            >
+            <span class="tool"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="tool"><i class="fa-solid fa-database"></i> MySQL</span>
+            <span class="tool"><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span class="tool"><i class="fa-brands fa-github"></i> GitHub</span>
+            <span class="tool"
+              ><i class="fa-solid fa-mobile-screen-button"></i> Responsive</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="servicesTitle">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-tag"
+              ><i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              Services</span
+            >
+            <h2 class="section-title" id="servicesTitle">
+              How Can I <span class="gradient-text">Help You?</span>
+            </h2>
+            <p class="section-desc">
+              Web services focused on clear UI, responsive layouts and practical
+              functionality.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <span class="service-num">01</span>
+              <div class="service-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3>Website Development</h3>
+              <p>
+                Responsive business, portfolio and landing pages built with
+                clean HTML, CSS and JavaScript.
+              </p>
+            </article>
+            <article class="service-card reveal" style="--delay: 0.08s">
+              <span class="service-num">02</span>
+              <div class="service-icon">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <h3>Design to Code</h3>
+              <p>
+                Turning a visual design into a real page with accurate spacing,
+                hierarchy and responsive behavior.
+              </p>
+            </article>
+            <article class="service-card reveal" style="--delay: 0.16s">
+              <span class="service-num">03</span>
+              <div class="service-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h3>Responsive Design</h3>
+              <p>
+                Layouts that adapt smoothly to phones, tablets, laptops and
+                large screens.
+              </p>
+            </article>
+            <article class="service-card reveal" style="--delay: 0.24s">
+              <span class="service-num">04</span>
+              <div class="service-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3>PHP & MySQL Pages</h3>
+              <p>
+                Forms, authentication pages and simple dashboards connected to
+                databases with PHP.
+              </p>
+            </article>
+            <article class="service-card reveal" style="--delay: 0.32s">
+              <span class="service-num">05</span>
+              <div class="service-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h3>Interactive UI</h3>
+              <p>
+                Useful JavaScript interactions, scroll reveals, filters, menus,
+                typing effects and UI feedback.
+              </p>
+            </article>
+            <article class="service-card reveal" style="--delay: 0.4s">
+              <span class="service-num">06</span>
+              <div class="service-icon">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <h3>Speed & SEO Basics</h3>
+              <p>
+                Semantic HTML, clean structure, lighter pages and useful
+                metadata for search visibility.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section-alt"
+        id="projects"
+        aria-labelledby="projectsTitle"
+      >
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-tag"
+              ><i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              Portfolio</span
+            >
+            <h2 class="section-title" id="projectsTitle">
+              Projects I've <span class="gradient-text">Built</span>
+            </h2>
+            <p class="section-desc">
+              A selection of academic and personal web projects.
+            </p>
+          </div>
+
+          <div
+            class="filters reveal"
+            role="tablist"
+            aria-label="Project filters"
+          >
+            <button class="filter-btn active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="filter-btn" type="button" data-filter="websites">
+              Websites
+            </button>
+            <button class="filter-btn" type="button" data-filter="dashboards">
+              Dashboards
+            </button>
+            <button class="filter-btn" type="button" data-filter="apps">
+              Web Apps
+            </button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <article class="project-card reveal" data-category="websites">
+              <div class="project-media">
+                <img
+                  src="images/hero.png"
+                  alt="SmileCare project preview"
+                /><span class="project-badge">Website</span>
+              </div>
+              <div class="project-body">
+                <div class="project-tech">
+                  <span>HTML</span><span>CSS</span><span>PHP</span
+                  ><span>MySQL</span>
+                </div>
+                <h3>SmileCare Dental</h3>
+                <p>
+                  Dental appointment website with service selection, booking
+                  form and database connection.
+                </p>
+                <div class="project-links">
+                  <a href="#contact"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+                  ><a href="#" aria-label="SmileCare code"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card reveal"
+              style="--delay: 0.1s"
+              data-category="dashboards"
+            >
+              <div class="project-media">
+                <img
+                  src="images/‫نظام إدارة الطوارئ.png"
+                  alt="Training management dashboard preview"
+                /><span class="project-badge">Dashboard</span>
+              </div>
+              <div class="project-body">
+                <div class="project-tech">
+                  <span>PHP</span><span>OOP</span><span>Sessions</span
+                  ><span>MySQL</span>
+                </div>
+                <h3>Smart City System</h3>
+                <p>
+                  Management dashboard concept for students, supervisors,
+                  reports, visits and system data.
+                </p>
+                <div class="project-links">
+                  <a href="#contact"
+                    >Preview
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+                  ><a href="#" aria-label="Training project code"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card reveal"
+              style="--delay: 0.2s"
+              data-category="dashboards"
+            >
+              <div class="project-media">
+                <img
+                  src="images/متجر رحال للأحذية الرياضية.png"
+                  alt="Employee management dashboard preview"
+                /><span class="project-badge">Dashboard</span>
+              </div>
+              <div class="project-body">
+                <div class="project-tech">
+                  <span>PHP</span><span>Sessions</span><span>CRUD</span>
+                </div>
+                <h3>Rihal Shoes</h3>
+                <p>
+                  Employee dashboard with add, list, edit, delete and search
+                  interactions built around PHP sessions.
+                </p>
+                <div class="project-links">
+                  <a href="#contact"
+                    >Preview
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+                  ><a href="#" aria-label="Employee project code"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card reveal"
+              style="--delay: 0.3s"
+              data-category="apps"
+            >
+              <div class="project-media">
+                <img
+                  src="images/project-portfolio.svg"
+                  alt="Personal portfolio project preview"
+                /><span class="project-badge">Web App</span>
+              </div>
+              <div class="project-body">
+                <div class="project-tech">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                  Responsive portfolio with dark mode, animated sections,
+                  project filters and interactive navigation.
+                </p>
+                <div class="project-links">
+                  <a href="#home"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+                  ><a href="#" aria-label="Portfolio code"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="projects-empty" id="projectsEmpty" hidden>
+            No projects in this category yet — more are coming soon.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contactTitle">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-tag"
+              ><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Contact</span
+            >
+            <h2 class="section-title" id="contactTitle">
+              Let's Build Your Next <span class="gradient-text">Project</span>
+            </h2>
+            <p class="section-desc">
+              Have an idea, a project or a job opportunity? Send a message and
+              I'll get back to you.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <div class="contact-intro">
+                <h3>Let's talk 👋</h3>
+                <p>
+                  Whether it is a new project, a question or just a hello, you
+                  can reach me through these channels.
+                </p>
+              </div>
+              <a class="contact-item" href="mailto:your-salahahlasa69@gmail.com"
+                ><span class="ci-icon"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <div>
+                  <small>Email</small
+                  ><strong>your-salahahlasa69@gmail.com</strong>
+                </div></a
+              >
+              <a
+                class="contact-item"
+                href="https://wa.me/972595076736"
+                target="_blank"
+                rel="noopener"
+                ><span class="ci-icon"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></span>
+                <div>
+                  <small>WhatsApp / Phone</small
+                  ><strong>+972 59 507 6736</strong>
+                </div></a
+              >
+              <a
+                class="contact-item"
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener"
+                ><span class="ci-icon"
+                  ><i class="fa-brands fa-github"></i
+                ></span>
+                <div>
+                  <small>GitHub</small
+                  ><strong>https://github.com/salahahlasa69-eng</strong>
+                </div></a
+              >
+              <a class="contact-item" href="#"
+                ><span class="ci-icon"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></span>
+                <div>
+                  <small>LinkedIn</small
+                  ><strong>linkedin.com/in/yourusername</strong>
+                </div></a
+              >
+              <div class="contact-item">
+                <span class="ci-icon"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <div>
+                  <small>Location</small><strong>Gaza, Palestine</strong>
+                </div>
+              </div>
+            </div>
+
+            <form
+              class="contact-form reveal"
+              style="--delay: 0.15s"
+              id="contactForm"
+              action="https://formsubmit.co/your-real-salahahlasa69@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+                class="honeypot"
+                aria-hidden="true"
+              />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label
+                  ><input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label
+                  ><input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label
+                ><input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="What is this about?"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label
+                ><textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button class="btn btn-primary submit-btn" type="submit">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <p class="form-note">
+                <i class="fa-solid fa-circle-info"></i> Replace the email/links
+                above with your real contact details before publishing.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <a class="logo" href="#home">Salah<span>.</span></a>
+          <p>Web & Frontend Developer — Gaza, Palestine</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a><a href="#skills">Skills</a
+          ><a href="#services">Services</a><a href="#projects">Work</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <p>© <span id="year"></span> Salah Ihlasa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <button
+      class="back-top"
+      id="backTop"
+      type="button"
+      aria-label="Back to top"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
